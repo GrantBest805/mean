@@ -1,0 +1,15 @@
+<div style="text-align:right">
+  <a href="/dashboard">Back to Polls</a>
+</div>
+<table class="table table-hover">
+  <tr>
+    <th>Option</th>
+    <th>Current Count of Votes</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let p of poll.options">
+    <td>{{p}}</td>
+    <td>{{poll._like.length}}</td>
+    <td><button (click)="theLike(poll._id)">Vote</button></td>
+  </tr>
+</table>

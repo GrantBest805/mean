@@ -1,0 +1,34 @@
+<div style="text-align:right">
+  <a [routerLink]="['/dashboard']">Cancel</a>
+</div>
+<h3>Put the Question and option here:</h3>
+<form (submit)="createPoll(formData)" #formData="ngForm">
+  <div class="form-group">
+    <label for="question">
+      Question:
+      <input type="text" name="question" required minlength="8" ngModel>
+    </label>
+  
+    <label for="option1">
+      Option:
+      <input type="text" name="option1" required minlength="4" ngModel>
+    </label>
+   
+    <label for="option2">
+      Option:
+      <input type="text" name="option2" required minlength="4" ngModel>
+    </label>
+ 
+    <label for="option3">
+      Option:
+      <input type="text" name="option3" required minlength="4" ngModel>
+    </label>
+  
+    <label for="option4">
+      Option:
+      <input type="text" name="option4" required minlength="4" ngModel>
+    </label>
+
+  </div>
+  <button type="submit" class="btn btn-default" [disabled]="!formData.form.valid">Post</button>
+</form>
